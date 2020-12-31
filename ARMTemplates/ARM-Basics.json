@@ -47,7 +47,7 @@
     },
     "resources": [
         {
-            "name": "[parameters('storagename')]",
+            "name": "[variables('uniqueStorageName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-04-01",
             "location": "[parameters('location')]",

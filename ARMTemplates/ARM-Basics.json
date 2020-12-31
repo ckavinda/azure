@@ -25,13 +25,8 @@
             "defaultValue": "Standard_LRS",
             "allowedValues": [
                 "Standard_LRS",
-                "Standard_GRS",
                 "Standard_RAGRS",
-                "Standard_ZRS",
-                "Premium_LRS",
-                "Premium_ZRS",
-                "Standard_GZRS",
-                "Standard_RAGZRS"
+                "Standard_ZRS"
             ]
         },
         "location": {
@@ -57,8 +52,9 @@
                 "name": "[parameters('storageSKU')]"
             },
             "properties": {
+                "accountType": "[parameters('storageSKU')]",
                 "supportsHttpsTrafficOnly": true
-               
+                
             },
             "kind": "StorageV2"
          

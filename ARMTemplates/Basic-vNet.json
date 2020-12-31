@@ -30,8 +30,7 @@
                     "properties": {
                         "addressPrefix": "172.20.2.0/24"
                     }
-                }
-
+                },
                 {
                     "name": "Darwin-Subnet-3",
                     "properties": {

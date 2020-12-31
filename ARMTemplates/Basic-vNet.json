@@ -36,6 +36,12 @@
                     "properties": {
                         "addressPrefix": "172.20.3.0/24"
                     }
+                },
+                {
+                    "name": "Darwin-Subnet-4",
+                    "properties": {
+                        "addressPrefix": "172.20.4.0/24"
+                    }
                 }
             ]
         }

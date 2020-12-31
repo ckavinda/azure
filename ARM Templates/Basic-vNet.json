@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [{
+        "name": "Darwin-vNet",
+        "type": "Microsoft.Network/virtualNetworks",
+        "apiVersion": "2019-11-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "displayName": "Darwin-vNet"
+        },
+        "properties": {
+            "addressSpace": {
+                "addressPrefixes": [
+                    "172.20.0.0/16"
+                ]
+            },
+            "subnets": [
+                {
+                    "name": "Darwin-Subnet-1",
+                    "properties": {
+                        "addressPrefix": "172.20.1.0/24"
+                    }
+                },
+                {
+                    "name": "Darwin-Subnet-2",
+                    "properties": {
+                        "addressPrefix": "172.20.2.0/24"
+                    }
+                }
+            ]
+        }
+    }],
+    "outputs": {}
+}

@@ -55,7 +55,7 @@
             },
             "properties": {
                 "supportsHttpsTrafficOnly": true,
-                "accountType": "[parameters('storageSKU')]"
+                "accountType": "Standard_LRS"
             },
             "kind": "StorageV2"
          

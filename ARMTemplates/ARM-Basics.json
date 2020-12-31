@@ -37,7 +37,7 @@
             "type": "string",
             "minLength": 3,
             "maxLength": 11,
-            "defaultValue":"[resourceGroup().name]"
+            "defaultValue":"[resourceGroup().location]"
         }
 
     },

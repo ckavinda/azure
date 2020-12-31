@@ -53,9 +53,12 @@
                 "DateCreated":"[parameters('DateCreated')]"
              
             },
+            "sku": {
+                "name": "[parameters('storageSKU')]"
+            },
             "properties": {
-                "supportsHttpsTrafficOnly": true,
-                "accountType": "Standard_LRS"
+                "supportsHttpsTrafficOnly": true
+               
             },
             "kind": "StorageV2"
          

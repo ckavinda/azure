@@ -32,11 +32,19 @@
         "location": {
             "type": "string",
             "defaultValue": "[resourceGroup().location]"
+        },
+        "storagePrefix": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 11,
+            "defaultValue":"[resourceGroup().name]"
         }
 
     },
     "functions": [],
-    "variables": {},
+    "variables": {
+        "uniqueStorageName": "[concat(parameters('storagePrefix'), uniqueString(resourceGroup().id))]"
+    },
     "resources": [
         {
             "name": "[parameters('storagename')]",
@@ -60,5 +68,10 @@
          
         }
     ],
-    "outputs": {}
+    "outputs": {
+        "storageEndpoint": {
+            "type": "object",
+            "value": "[reference(variables('uniqueStorageName')).primaryEndpoints]"
+        }
+    }
 }

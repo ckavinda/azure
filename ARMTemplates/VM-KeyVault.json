@@ -60,7 +60,7 @@
     "publicIPAddressType": "Dynamic",
     "vmName": "WIN2K19-01",
     "virtualNetworkName": "Melbourne-Vnet",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'Melbourne-Vnet','Subnet1')]",
     "networkSecurityGroupName": "[concat(variables('virtualNetworkName'), '-',variables('subnetName'), '-nsg')]"
   },
   "resources": [

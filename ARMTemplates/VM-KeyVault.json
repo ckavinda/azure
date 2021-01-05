@@ -107,7 +107,7 @@
       "location": "[parameters('location')]",
       "dependsOn": [
         "[variables('publicIPAddressName')]",
-        "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.Network/virtualNetworks/Melbourne-Vnet"
+        "[resourceId('Microsoft.Network/VirtualNetworks',variables('virtualNetworkName'))]"
       ],
       "properties": {
         "ipConfigurations": [
@@ -132,7 +132,7 @@
       "name": "[variables('vmName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.Storage/storageAccounts/ckfzirbnbm6ae5hk",
+        "[resourceId('Microsoft.Storage/StorageAccounts', variables('storageAccountName'))]",
         "[variables('nicName')]"
       ],
       "properties": {
@@ -172,7 +172,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "https://ckfzirbnbm6ae5hk.blob.core.windows.net/"
+            "storageUri": "[ reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))).primaryEndpoints.blob ]"
           }
         }
       }

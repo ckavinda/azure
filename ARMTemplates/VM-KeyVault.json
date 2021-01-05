@@ -172,7 +172,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[reference(variables('storageAccountName')).primaryEndpoints.blob]"
+            "storageUri": "https://ckfzirbnbm6ae5hk.blob.core.windows.net/"
           }
         }
       }

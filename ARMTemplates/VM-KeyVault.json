@@ -167,13 +167,8 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
             }
           ]
-        },
-        "diagnosticsProfile": {
-          "bootDiagnostics": {
-            "enabled": true,
-            "storageUri": "https://ckfzirbnbm6ae5hk.blob.core.windows.net/"
-          }
         }
+  
       }
     }
   ]

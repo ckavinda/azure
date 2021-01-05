@@ -59,7 +59,7 @@
     "publicIPAddressName": "[concat(variables('vmName'), '-PIP01')]",
     "publicIPAddressType": "Dynamic",
     "virtualNetworkName": "Melbourne-Vnet",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets','Melbourne-Vnet', variables('subnetName'))]",
     "networkSecurityGroupName": "[concat(variables('virtualNetworkName'), '-',variables('subnetName'), '-nsg')]"
   },
   "resources": [

@@ -107,7 +107,7 @@
       "location": "[parameters('location')]",
       "dependsOn": [
         "[variables('publicIPAddressName')]",
-        "[resourceId('Microsoft.Network/VirtualNetworks',variables('virtualNetworkName'))]"
+        "[resourceId('Microsoft.Network/virtualNetworks/',variables('virtualNetworkName'))]"
       ],
       "properties": {
         "ipConfigurations": [
@@ -132,7 +132,7 @@
       "name": "[variables('vmName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/StorageAccounts', variables('storageAccountName'))]",
+        "[resourceId('Microsoft.Storage/StorageAccounts/', variables('storageAccountName'))]",
         "[variables('nicName')]"
       ],
       "properties": {

@@ -107,7 +107,7 @@
       "location": "[parameters('location')]",
       "dependsOn": [
         "[variables('publicIPAddressName')]",
-        "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.Network/virtualNetworks/Melbourne-Vnet"
+        "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]"
       ],
       "properties": {
         "ipConfigurations": [

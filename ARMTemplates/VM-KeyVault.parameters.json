@@ -3,24 +3,24 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "adminUsername": {
-            "value": "CKFAdmin" // TODO: Fill in parameter value
+            "value": "CKFAdmin" 
         },
         "adminPassword": {
             "reference": {
-        "keyVault": {
-        "id": "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.KeyVault/vaults/CKF-KV02"
-        },
-        "secretName": "VMPassword"
-    }
+            "keyVault": {
+            "id": "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.KeyVault/vaults/CKF-KV02"
+            },
+            "secretName": "VMPassword"
+            }
         },
         "dnsLabelPrefix": {
-            "value": "WIN2K19" // TODO: Fill in parameter value
+            "value": "WIN2K19" 
         },
         "windowsOSVersion": {
             "value": "2019-Datacenter"
         },
         "location": {
-            "value": "" // TODO: Fill in parameter value
+            "value": ""
         },
         "vmSize": {
             "value": "Standard_D2_v3"

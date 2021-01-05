@@ -59,7 +59,7 @@
     "publicIPAddressName": "[concat(variables('vmName'), '-PIP01')]",
     "publicIPAddressType": "Dynamic",
     "virtualNetworkName": "Melbourne-Vnet",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets','Melbourne-Vnet', variables('subnetName'))]",
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets',variables('virtualNetworkName'), variables('subnetName'))]",
     "networkSecurityGroupName": "[concat(variables('virtualNetworkName'), '-',variables('subnetName'), '-nsg')]"
   },
   "resources": [
@@ -107,7 +107,7 @@
       "location": "[parameters('location')]",
       "dependsOn": [
         "[variables('publicIPAddressName')]",
-        "[resourceId('Microsoft.Network/virtualNetworks/',variables('virtualNetworkName'))]"
+        "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.Network/virtualNetworks/Melbourne-Vnet"
       ],
       "properties": {
         "ipConfigurations": [

@@ -171,7 +171,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[ resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')).primaryEndpoints.blob ]"
+            "storageUri": "https://ckfzirbnbm6ae5hk.blob.core.windows.net/"
           }
         }
       }

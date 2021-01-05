@@ -14,7 +14,7 @@
             }
         },
         "dnsLabelPrefix": {
-            "value": "WIN2K19" 
+            "value": "WIN2K19CKF2021" 
         },
         "windowsOSVersion": {
             "value": "2019-Datacenter"

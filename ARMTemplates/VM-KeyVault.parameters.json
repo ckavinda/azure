@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "adminPassword": {
+            "reference": {
+        "keyVault": {
+        "id": "/subscriptions/efd5d843-2bd6-456b-9a5e-35358803e28b/resourceGroups/AZ-104/providers/Microsoft.KeyVault/vaults/CKF-KV02"
+        },
+        "secretName": "VMPassword"
+    }
+        },
+        "dnsLabelPrefix": {
+            "value": "WIN2K19" // TODO: Fill in parameter value
+        },
+        "windowsOSVersion": {
+            "value": "2019-Datacenter"
+        },
+        "location": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "vmSize": {
+            "value": "Standard_D2_v3"
+        }
+    }
+}

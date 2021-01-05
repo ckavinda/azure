@@ -53,14 +53,13 @@
     "storageAccountName": "ckfzirbnbm6ae5hk",
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
+    "vmName": "WIN2K19-01",
     "nicName": "[concat(variables('vmName'), '-vNic1')]",
     "subnetName": "Subnet1",
-    "storageAccountType": "Standard_LRS",
     "publicIPAddressName": "[concat(variables('vmName'), '-PIP01')]",
     "publicIPAddressType": "Dynamic",
-    "vmName": "WIN2K19-01",
     "virtualNetworkName": "Melbourne-Vnet",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'Melbourne-Vnet','Subnet1')]",
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
     "networkSecurityGroupName": "[concat(variables('virtualNetworkName'), '-',variables('subnetName'), '-nsg')]"
   },
   "resources": [

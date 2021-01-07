@@ -25,7 +25,7 @@
 
     "dnsLabelPrefix": {
         "type": "string",
-        "defaultValue": "[concat('pip-', uniqueString(resourceGroup().id))]",
+        "defaultValue": "[concat('pip-3-', uniqueString(resourceGroup().id))]",
         "metadata": {
             "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
         }
@@ -71,10 +71,10 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat('store', uniquestring(resourceGroup().id))]",
-    "publicIPAddressName": "[concat(variables('vmName'), '-PIP01')]",
+    "storageAccountName": "store7iu7xscwqjjic",
+    "publicIPAddressName": "[concat(variables('vmName'), '-PIP03')]",
     "publicIPAddressType": "Dynamic",
-    "vmName": "[concat(parameters('VMPrefix'), '-01')]",
+    "vmName": "[concat(parameters('VMPrefix'), '-03')]",
     "nicName": "[concat(variables('vmName'), '-vNic1')]",
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer"
@@ -122,7 +122,7 @@
                             "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
                         },
                         "subnet": {
-                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets','Melbourne-vNet','SubnetA')]"
+                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets','Darwin-vNet','SubnetA')]"
                         }
                     }
                 }
@@ -135,8 +135,7 @@
         "name": "[variables('vmName')]",
         "location": "[parameters('location')]",
         "dependsOn": [
-            "[variables('nicName')]",
-            "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+            "[variables('nicName')]"            
         ],
         "properties": {
             "hardwareProfile": {

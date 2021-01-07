@@ -12,15 +12,6 @@
             },
             "secretName": "VMPassword"
             }
-        },
-        "dnsLabelPrefix": {
-            "value": "win2k19ckf" 
-        },
-        "windowsOSVersion": {
-            "value": "2019-Datacenter"
-        },
-        "vmSize": {
-            "value": "Standard_D2_v3"
         }
     }
 }
